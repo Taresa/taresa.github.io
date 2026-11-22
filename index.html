@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taresa Nephew</title>
+<meta name="description" content="Taresa Nephew is a product and program leader whose career spans energy and utilities, cloud infrastructure, and public-sector technology.">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --text: #1a1a1a;
+    --muted: #5f5a52;
+    --line: #e3dccf;
+    --accent: #b4472b;
+    --accent-dark: #8f3720;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  section, header, footer { padding: 64px 0; }
+  header { padding-top: 88px; }
+  h1 {
+    font-size: clamp(2.1rem, 7vw, 3.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+  p { margin: 0 0 1em; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-dark); }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 26px;
+    margin-top: 12px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+  .btn:hover { background: var(--accent-dark); color: #fff; }
+  .tags, .creds { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags { gap: 10px 8px; }
+  .tags li {
+    border: 1px solid var(--accent);
+    color: var(--accent-dark);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.9rem;
+  }
+  .tags button {
+    position: relative;
+    font: inherit;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--accent-dark);
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 14px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+  }
+  .tags button::after { content: ""; position: absolute; inset: -5px -2px; }
+  .tags button:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+  .tags button:hover, .tags button[aria-expanded="true"] { background: var(--accent); color: #fff; }
+  .tagbox { margin-top: 24px; }
+  .tagbox .tags { margin-top: 0; }
+  .evidence {
+    margin-top: 16px;
+    padding: 18px 22px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+    background: #fffdf9;
+    color: var(--muted);
+    font-size: 0.98rem;
+    animation: fadein .25s ease;
+  }
+  .evidence[hidden] { display: none; }
+  .proof { margin: 24px 0 0; }
+  .proof dt { font-weight: 600; margin-top: 14px; }
+  .proof dd { margin: 2px 0 0; color: var(--muted); font-size: 0.98rem; }
+  .js .proof { display: none; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  .creds { gap: 6px 10px; }
+  .creds li { color: var(--muted); font-size: 0.92rem; }
+  .creds li:not(:last-child)::after { content: "·"; margin-left: 10px; }
+  .cards { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+    background: #fffdf9;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  @media (hover: hover) {
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 28px rgba(26, 26, 26, 0.07);
+    }
+  }
+  h1, h3 { text-wrap: balance; }
+  p, dd, li { text-wrap: pretty; }
+  h2::before { content: ""; display: block; width: 28px; height: 2px; background: var(--accent); margin-bottom: 14px; }
+  .motion .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .motion .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .evidence { animation: none; }
+    .card, .tags button { transition: none; }
+    .card:hover { transform: none; }
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.35; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+  .jobs { list-style: none; margin: 0; padding: 0; }
+  .jobs li { padding: 22px 0; border-top: 1px solid var(--line); }
+  .jobs li:last-child { border-bottom: 1px solid var(--line); }
+  .jobs strong { display: block; margin-bottom: 4px; }
+  .jobs p { color: var(--muted); font-size: 0.98rem; }
+  .jobs p + p { margin-top: 0.6em; }
+  .credwrap { margin-top: 24px; }
+  footer { border-top: 1px solid var(--line); }
+  .links { margin-top: 20px; }
+  .links a { display: inline-block; padding: 12px 0; }
+  .copy { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+  @media (min-width: 720px) {
+    section, header, footer { padding: 96px 0; }
+    header { padding-top: 128px; }
+    .cards { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+<script>
+  document.documentElement.classList.add("js");
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("motion");
+  }
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Product leader for data, energy, and cloud platforms</h1>
+  <p>I'm Taresa Nephew, a product and program leader whose career spans energy and utilities, cloud infrastructure, and public-sector technology. Most recently, I owned the customer-facing Energy Intelligence platform at Arcadia, used by about 25% of the Fortune 500. I've launched grid-edge, metering, and SaaS analytics products, led secure data programs at Oracle Cloud Infrastructure, and modernized services people rely on every day. I've been building machine learning into products since my Itron days, from analytics at the grid edge to SaaS insights for utilities. Today I build products end to end with Claude Code, and I ship them in public.</p>
+  <a class="btn" href="https://github.com/Taresa">See what I'm building</a>
+</header>
+
+<main>
+<section aria-labelledby="lead">
+  <h2 id="lead">How I lead</h2>
+  <p>I lead by making the hard trade-offs visible. Good products come from understanding the customer, the system, and the constraints at the same time, then giving teams a clear reason for every decision. I'm a Leadership Spokane graduate and a servant leader at heart: I build teams that grow, not just ship.</p>
+  <div class="tagbox" id="tagbox">
+    <ul class="tags">
+      <li>Servant leadership</li>
+      <li>Customer obsession</li>
+      <li>Systems thinking</li>
+      <li>Clear trade-offs</li>
+      <li>Data-informed decisions</li>
+      <li>Build to learn</li>
+    </ul>
+    <div class="evidence" id="evidence" role="region" aria-label="Evidence" hidden></div>
+  </div>
+  <dl class="proof" id="proof">
+    <dt>Servant leadership</dt>
+    <dd>Leadership Spokane servant leader graduate. Built the first PMO operations team at Washington State Department of Health and grew a team of eight project managers.</dd>
+    <dt>Customer obsession</dt>
+    <dd>Owned Arcadia's client-facing Energy Intelligence platform and turned customer and account-team feedback into the roadmap.</dd>
+    <dt>Systems thinking</dt>
+    <dd>Brought server, data center, network and product teams together at Oracle Cloud Infrastructure to launch secure, U.S.-resident data facilities for TikTok.</dd>
+    <dt>Clear trade-offs</dt>
+    <dd>Negotiated scope, schedule and customer needs at Itron, and presented program trade-offs to governance boards and executives.</dd>
+    <dt>Data-informed decisions</dt>
+    <dd>Uses SQL and usage data to set priorities. Touchless Managed Provisioning cut tenant provisioning time by 60% and grew platform adoption.</dd>
+    <dt>Build to learn</dt>
+    <dd>Prototyped an AI assistant with Voiceflow and the Gemini API. Now shipping products in public with Claude Code.</dd>
+  </dl>
+</section>
+
+<section aria-labelledby="bring">
+  <h2 id="bring">What I bring</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Product strategy for data and platform products.</h3>
+      <p>Vision, roadmaps, MVPs and PRDs that turn many teams' competing needs into one coherent platform.</p>
+    </div>
+    <div class="card">
+      <h3>Modernizing legacy systems in regulated industries.</h3>
+      <p>Moving decades-old systems forward in energy, cloud security, and public services without breaking what customers depend on.</p>
+    </div>
+    <div class="card">
+      <h3>Technical program delivery at scale.</h3>
+      <p>$10M programs across cloud, SaaS, hardware and firmware, with global teams and executive governance.</p>
+    </div>
+    <div class="card">
+      <h3>Applied AI, from grid edge to Claude Code</h3>
+      <p>Shipped machine-learning products for utilities at Itron. Today I take ideas from requirements to working software with AI, and show teams how to work the same way.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="exp">
+  <h2 id="exp">Experience</h2>
+  <ul class="jobs">
+    <li>
+      <strong>Arcadia (formerly ENGIE Impact)</strong>
+      <p>Senior Product Manager. Owned the client-facing Energy Intelligence platform, used by about 25% of the Fortune 500 to analyze the more than $30 billion in utility bills Arcadia pays for them each year. Set the vision and roadmap, turned feedback from customers and account teams into clear requirements and user stories, and brought a long-running legacy platform into shape so it kept serving customers through the post-acquisition transition.</p>
+    </li>
+    <li>
+      <strong>Washington State Department of Health</strong>
+      <p>Supervisor of Project Management, IT. Built the agency's first PMO operations team, led a team of eight project managers, and ran a portfolio of modernization projects, including WIC online ordering with Walmart and an agency-wide timekeeping replacement.</p>
+    </li>
+    <li>
+      <strong>Oracle Cloud Infrastructure, 2022 to 2023</strong>
+      <p>Principal Product Manager. Led the program behind secure, U.S.-resident data facilities for TikTok. Touchless Managed Provisioning cut tenant provisioning time by 60%.</p>
+    </li>
+    <li>
+      <strong>Itron, 2010 to 2022 (energy and utilities)</strong>
+      <p>Senior Technical Program Manager; Program Manager, Product Development; Senior Proposal Analyst, Go-to-Market.</p>
+      <p>Launched grid-edge computing, gas metering, and SaaS analytics products, including machine-learning analytics at the grid edge. Roadmaps supported more than $500M in device revenue and $1.3B in network solutions. Led $300M+ in proposals as a go-to-market lead.</p>
+    </li>
+  </ul>
+</section>
+
+<section aria-labelledby="now">
+  <h2 id="now">Now building</h2>
+  <p>A 12-week build in public: a business analysis toolkit for Claude, a food rescue pickup planner, and a dispatch agent. Every step is on GitHub.</p>
+</section>
+
+<section aria-labelledby="teach">
+  <h2 id="teach">Teaching and speaking</h2>
+  <p>Designed the project management concentration and taught in the Gonzaga University MBA program. Teach PMP exam prep every year. Guest speaker at Whitworth University, Leadership Spokane, and regional schools and professional groups.</p>
+  <div class="credwrap">
+    <p><strong>Credentials:</strong></p>
+    <ul class="creds">
+      <li>MBA, Gonzaga University</li>
+      <li>PMP</li>
+      <li>PMI-ACP</li>
+      <li>ISC2 Certified in Cybersecurity</li>
+      <li>OCI AI Foundations</li>
+      <li>Microsoft Azure Fundamentals</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="out">
+  <h2 id="out">Outside of work</h2>
+  <p>Outside of work, I volunteer with several nonprofits and share my home with two dogs and three cats. I'm passionate about houseplants and equally devoted to the fiber arts: I spin, knit, and weave. Turning raw fiber into finished cloth is its own kind of product work, one careful step at a time.</p>
+</section>
+</main>
+
+<footer>
+  <p>Hiring a senior product manager, or need help shipping a product? Let's talk.</p>
+  <a class="btn" href="mailto:taresa@gmail.com">Email me</a>
+  <div class="links"><a href="https://github.com/Taresa">GitHub</a></div>
+  <p class="copy">© 2026 Taresa Nephew</p>
+</footer>
+
+</div>
+<script>
+(function () {
+  var box = document.getElementById("tagbox");
+  var panel = document.getElementById("evidence");
+  var proof = document.getElementById("proof");
+  if (box && panel && proof) {
+    var texts = [].map.call(proof.querySelectorAll("dd"), function (d) { return d.textContent; });
+    var items = box.querySelectorAll(".tags li");
+    var buttons = [];
+    var pinned = -1;
+    var canHover = matchMedia("(hover: hover)").matches;
+    var show = function (i) {
+      if (i < 0) { panel.hidden = true; panel.textContent = ""; return; }
+      if (panel.textContent !== texts[i]) {
+        panel.textContent = texts[i];
+        panel.style.animation = "none"; panel.offsetWidth; panel.style.animation = "";
+      }
+      panel.hidden = false;
+    };
+    var pin = function (i) {
+      pinned = i;
+      buttons.forEach(function (b, j) { b.setAttribute("aria-expanded", j === i ? "true" : "false"); });
+      show(i);
+    };
+    [].forEach.call(items, function (li, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = li.textContent;
+      b.setAttribute("aria-expanded", "false");
+      b.setAttribute("aria-controls", "evidence");
+      b.addEventListener("click", function () { pin(pinned === i ? -1 : i); });
+      if (canHover) b.addEventListener("mouseenter", function () { show(i); });
+      li.textContent = "";
+      li.style.cssText = "border:0;padding:0";
+      li.appendChild(b);
+      buttons.push(b);
+    });
+    if (canHover) box.addEventListener("mouseleave", function () { show(pinned); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && pinned > -1) { var b = buttons[pinned]; pin(-1); b.focus(); }
+    });
+  }
+
+  if (document.documentElement.classList.contains("motion")) {
+    var secs = document.querySelectorAll("main section");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.1 });
+    [].forEach.call(secs, function (s) { s.classList.add("reveal"); io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
