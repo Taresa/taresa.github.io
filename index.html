@@ -140,6 +140,15 @@
   .jobs strong { display: block; margin-bottom: 4px; }
   .jobs p { color: var(--muted); font-size: 0.98rem; }
   .jobs p + p { margin-top: 0.6em; }
+  .jobs details { margin-top: 8px; }
+  .jobs summary { padding: 10px 0; color: var(--accent); font-weight: 600; font-size: 0.98rem; cursor: pointer; }
+  .jobs summary::marker { color: var(--accent); }
+  .jobs summary:hover { color: var(--accent-dark); }
+  .jobs summary:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+  .jobs .hide, .jobs details[open] .show { display: none; }
+  .jobs details[open] .hide { display: inline; }
+  .jobs details ul { margin: 6px 0 0; padding-left: 1.2em; color: var(--muted); font-size: 0.98rem; }
+  .jobs details li, .jobs details li:last-child { padding: 0; margin-bottom: 0.6em; border: 0; }
   .credwrap { margin-top: 24px; }
   footer { border-top: 1px solid var(--line); }
   .links { margin-top: 20px; }
@@ -230,15 +239,47 @@
     <li>
       <strong>Washington State Department of Health</strong>
       <p>Supervisor of Project Management, IT. Built the agency's first PMO operations team, led a team of eight project managers, and ran a portfolio of modernization projects, including WIC online ordering with Walmart and an agency-wide timekeeping replacement.</p>
+      <details>
+        <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+        <ul>
+          <li>Provided leadership, strategic direction, and mentorship to a team of 8 project managers, supervising performance, training, and development.</li>
+          <li>Championed modernization initiatives including WIC online ordering in partnership with Walmart, and an agency-wide timesheet replacement system, aligning public health goals with user-centered design.</li>
+          <li>Synthesized stakeholder feedback and system data to identify workflow gaps, translating insights into actionable product strategies.</li>
+          <li>Partnered with IT, operations, and product teams to define business requirements and validate enhancements aligned with compliance and risk standards.</li>
+          <li>Led user research and testing assessments to inform product decisions, crafting user stories for product development with clear acceptance criteria.</li>
+          <li>Mentored project teams in business case development, prioritization, and user experience optimization, fostering a culture of continuous improvement.</li>
+        </ul>
+      </details>
     </li>
     <li>
       <strong>Oracle Cloud Infrastructure</strong>
       <p>Principal Product Manager. Led the program behind secure, U.S.-resident data facilities for TikTok. Touchless Managed Provisioning cut tenant provisioning time by 60%.</p>
+      <details>
+        <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+        <ul>
+          <li>Spearheaded strategic product initiatives for TikTok, launching secure global data analysis facilities, integrating server, data center, network, and product teams to overcome technical challenges, delivering to complex international security requirements.</li>
+          <li>Defined MVPs and authored PRDs for OCI products, aligning customer needs with competitive market intelligence.</li>
+          <li>Drove customer enablement by introducing new OCI features to engineering teams for Touchless Managed Provisioning (TMP), reducing tenant provisioning time by 60% and increasing platform adoption and usage.</li>
+          <li>Delivered weekly executive briefings, surfacing escalations and informing leadership decisions across technical and business domains.</li>
+        </ul>
+      </details>
     </li>
     <li>
       <strong>Itron (energy and utilities)</strong>
       <p>Senior Technical Program Manager.</p>
       <p>Launched grid-edge computing, gas metering, and SaaS analytics products, including machine-learning analytics at the grid edge. Roadmaps supported more than $500M in device revenue and $1.3B in network solutions. Led $300M+ in proposals as a go-to-market lead.</p>
+      <details>
+        <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+        <ul>
+          <li>Led cross-functional initiatives to optimize utility system deployments, establishing a readiness framework that improved release efficiency and improved early adopter customer experience.</li>
+          <li>Identified recurring deployment gaps and diplomatically drove process improvements across documentation, training, and release protocols, increasing customer satisfaction and internal go to market velocity.</li>
+          <li>Delivered high-impact product launches across cloud, SaaS, hardware, and firmware domains, including Distributed Intelligence for grid edge computing ($10M dev budget), Gas Intelis Meter ($10M), and Itron Analytics (SaaS).</li>
+          <li>Orchestrated global programs with complex integrations, managing stakeholder expectations and ensuring delivery to scope, schedule, and quality benchmarks.</li>
+          <li>Presented program justifications and escalations to governance boards and executives with clarity and precision, influencing strategic decisions.</li>
+          <li>Led the development of over $300M in RFP responses and solution proposals, translating complex technical offerings into compelling value narratives tailored to diverse customers.</li>
+          <li>Collaborated closely with product management, engineering, and sales to shape go-to-market strategies, aligning messaging with product capabilities, customer pain points, and competitive positioning.</li>
+        </ul>
+      </details>
     </li>
   </ul>
 </section>
